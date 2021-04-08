@@ -1,0 +1,529 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 ng-if="!isSub">10th Standard Records</h1>
+                    <h1 ng-if="isSub">10th Standard Subjects</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#!Menu1" ng-click="clickFunction('Home')">Home</a></li>
+                        <li class="breadcrumb-item active" ng-if="!isSub">10th Std</li>
+                        <li class="breadcrumb-item active" ng-if="isSub" >Subjects</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content" ng-if="!isSub">
+        <div class="container-fluid">
+
+            <h3 class="mt-4 mb-2" style="text-align: center;">10th Std</h3>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-success mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-book"></i></span>
+
+                        <div class="info-box-content" ng-click="clickFunction('Subject')">
+                            <span class="info-box-text">Subject</span>
+                            <span class="info-box-number">All Subject</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-blue mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Calender & Exam Time Table</span>
+                            <span class="info-box-number">All Schedule</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-black mouse_cursor">
+                        <span class="info-box-icon"><i class="fas fa-question"></i></span>
+
+                        <div class="info-box-content" data-toggle="modal" data-target="#QuestionBank">
+                            <span class="info-box-text">Question Bank</span>
+                            <span class="info-box-number">All Questions</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+
+
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-danger mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-book"></i></span>
+
+                        <div class="info-box-content" data-toggle="modal" data-target="#exampleModal">
+                            <span class="info-box-text">Novels</span>
+                            <span class="info-box-number">All Novels</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+
+            <div class="modal fade" id="QuestionBank" tabindex="-1" aria-labelledby="QuestionBank" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header float-right">
+                            <h5>10th Std Question Bank</h5>
+                            <div class="text-right"> <i data-dismiss="modal" aria-label="Close" class="fa fa-close"></i> </div>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="col">S.No</th>
+                                            <th scope="col">Tamil 1</th>
+                                            <th scope="col">Tamil 2</th>
+                                            <th scope="col">English 1</th>
+                                            <th scope="col">English 2</th>
+                                            <th scope="col">Maths</th>
+                                            <th scope="col">Science</th>
+                                            <th scope="col">Social Science</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                        <tr class="text-center">
+                                            <th scope="row">1</th>
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_Tamil_1')"></i>
+                                                </a></td>
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_Tamil_2')"></i>
+                                                </a></td>
+                                       
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_English_1')"></i>
+                                                </a></td>
+                                                
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_English_2')"></i>
+                                                </a></td>
+                                    
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_Maths')"></i>
+                                                </a></td>
+                                      
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_Science')"></i>
+                                                </a></td>
+                                  
+                                            <td>2017 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2017_SocialScience')"></i>
+                                                </a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">2</th>
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_Tamil_1')"></i>
+                                                </a></td>
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_Tamil_2')"></i>
+                                                </a></td>
+                                       
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_English_1')"></i>
+                                                </a></td>
+                                                
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_English_2')"></i>
+                                                </a></td>
+                                          
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_Maths')"></i>
+                                                </a></td>
+                                        
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_Science')"></i>
+                                                </a></td>
+                                       
+                                            <td>2018 <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfQB('2018_SocialScience')"></i>
+                                                </a>
+                                            </td>
+                                            
+                                        </tr>
+                                        
+                                        
+                                                                                                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header float-right">
+                            <h5>Novals List</h5>
+                            <div class="text-right"> <i data-dismiss="modal" aria-label="Close" class="fa fa-close"></i> </div>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="col">S.No</th>
+                                            <th scope="col">Novals Name</th>
+                                            <th scope="col">Pdf</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <th scope="row">1</th>
+                                            <td>Selected work of Dr B R Ambedkar</td>
+                                            <td>
+                                                <a href="">
+                                                    <i class="fa fa-download mouse_cursor"  ng-click="DownloadPdfNovels('Ambedkar')"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">2</th>
+                                            <td>Peter-and-wendy</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('peter-and-wendy')"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">3</th>
+                                            <td>English-fairy-tales</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('english-fairy-tales')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">4</th>
+                                            <td>Wings of Fire- A P J Abdul Kalam</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Wings of Fire_ an autobiograph - A P J Abdul Kalam_3873')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">5</th>
+                                            <td>The Time Machine NT</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('The_Time_Machine_NT')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">6</th>
+                                            <td>The Three Little Pigs</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('The-Three-Little-Pigs-L1')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">7</th>
+                                            <td>Tales of Space and Time</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Tales of Space and Time - HG Wells - PDF')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">8</th>
+                                            <td>Swamiji Biography</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Swamiji Biography')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">9</th>
+                                            <td>Schatzinsel_E</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Schatzinsel_E')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">10</th>
+                                            <td>Mother Teresa Caring For The Worlds Poor</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Mother_Teresa_-_Caring_For_The_Worlds_Poor')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">11</th>
+                                            <td>DSIL Lib</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('DSIL_Lib_E1312881157')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">12</th>
+                                            <td>Charlottes Web</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Charlotte_s_Web_')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">13</th>
+                                            <td>An-Autobiography</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('An-Autobiography')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">14</th>
+                                            <td>Alice in Wonderland</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Alice_in_Wonderland')"></i></a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">15</th>
+                                            <td>Alexender the Great By Jacob Abbott</td>
+                                            <td><a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('Alexender the Great By Jacob Abbott')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">16</th>
+                                            <td>BULLY BILL Free Childrens Book By Monkey Pen</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('030-BULLY-BILL-Free-Childrens-Book-By-Monkey-Pen')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">17</th>
+                                            <td>JIMMYS FIRST DAY OF SCHOOL</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('029-JIMMYS-FIRST-DAY-OF-SCHOOL-Free-Childrens-Book-By-Monkey-Pen')"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">18</th>
+                                            <td>THE WAY OF THE WOODS</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('028-THE-WAY-OF-THE-WOODS-Free-Childrens-Book-By-Monkey-Pen')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">19</th>
+                                            <td>THE HIKE Free Childrens Book</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('026-THE-HIKE-Free-Childrens-Book-By-Monkey-Pen (1)')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">20</th>
+                                            <td>DRAGONS Free Childrens Book</td>
+                                            <td><a href="">
+                                                    <i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('025-DRAGONS-Free-Childrens-Book-By-Monkey-Pen (1)')"></i>
+                                                </a></td>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th scope="row">21</th>
+                                            <td>A DOG ON A LOG Free Childrens Book</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-download mouse_cursor" ng-click="DownloadPdfNovels('023-A-DOG-ON-A-LOG-Free-Childrens-Book-By-Monkey-Pen (2)')"></i>
+                                                </a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="info-box bg-fuchsia mouse_cursor">
+                        <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+                        <div class="info-box-content" ng-click="DownloadPdfForm('Scholarship')">
+                            <span class="info-box-text">Scholarship</span>
+                            <span class="info-box-number">All Scholarship</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    
+    <!-- /.content -->
+    <section class="content" ng-if="isSub">
+        <div class="container-fluid">
+
+            <h3 class="mt-4 mb-2" style="text-align: center;">Subjects</h3>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-orange mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-book"></i></span>
+
+                        <div class="info-box-content" ng-click="DownloadPdfForm('Tamil')">
+                            <span class="info-box-text">Tamil</span>
+                            <span class="info-box-number">All Tamil Books</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-yellow mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+
+                        <div class="info-box-content" ng-click="DownloadPdfForm('English')">
+                            <span class="info-box-text">English</span>
+                            <span class="info-box-number">All English Books</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-olive mouse_cursor">
+                        <span class="info-box-icon"><i class="fas fa-question"></i></span>
+
+                        <div class="info-box-content" ng-click="DownloadPdfForm('Maths')">
+                            <span class="info-box-text">Maths</span>
+                            <span class="info-box-number">All Maths Books</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="info-box bg-lime mouse_cursor">
+                        <span class="info-box-icon"><i class="fa fa-book"></i></span>
+
+                        <div class="info-box-content" ng-click="DownloadPdfForm('Science')">
+                            <span class="info-box-text">Science</span>
+                            <span class="info-box-number">All Science Books</span>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <!--                            <span class="progress-description">
+                                                            70% Increase in 30 Days
+                                                        </span>-->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-2"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="info-box bg-gray mouse_cursor">
+                        <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+                        <div class="info-box-content" ng-click="DownloadPdfForm('SocialScience')">
+                            <span class="info-box-text">Social Science</span>
+                            <span class="info-box-number">All Social Science Books</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>                        
+                    <!-- /.info-box -->
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+
+
+
+
+        </div><!-- /.container-fluid -->
+    </section>
+
+</div>
